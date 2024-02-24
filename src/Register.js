@@ -1,6 +1,7 @@
 import './App.css';
 import {useState} from 'react'
 import { Header } from './Header';
+import {useNavigate} from 'react-router-dom';
 
 function Register() {
 const [name, setName] = useState();
@@ -9,6 +10,7 @@ const [mobile, setMobile] = useState();
 const [password, setPassword] = useState();
 const [repassword, setRepassword] = useState();
 const [submited, setSubmitted] = useState(true);
+const navigate=useNavigate();
 
     // Handling the name change
     const handleName = (e) => {
@@ -36,7 +38,10 @@ const [submited, setSubmitted] = useState(true);
   const getdata=(e)=>{
     e.preventDefault();
     const data={name:name,email:email,password:password,mobile:mobile,submited:submited};
-    
+    if(data.name && data.email && data.password){
+      localStorage.setItem('user-name',data.name);
+      navigate('/');
+    }
     console.log(data);
   }
 
