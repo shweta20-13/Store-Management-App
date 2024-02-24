@@ -6,6 +6,10 @@ export function Header() {
       localStorage.clear('user-name');
       navigate('/login');
    };
+
+   function formateName(name){
+      return name.charAt(0).toUpperCase() + name.slice(1);
+   }
    
    return (
       <>
@@ -27,10 +31,10 @@ export function Header() {
                   localStorage.getItem('user-name') ? (
                      <>
                         <li>
-                           <a href="">{localStorage.getItem('user-name')}</a>
+                           <a className='name' href="">{formateName(localStorage.getItem('user-name'))}</a>
                         </li>
                         <li>
-                           <a href="" onClick={logout}>Logout</a>
+                           <a className='logout' href=""  onClick={logout}>Logout</a>
                         </li>
                      </>
                   ) : (

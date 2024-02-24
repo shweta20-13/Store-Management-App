@@ -1,0 +1,54 @@
+{
+  "user": [
+    {
+      "id": "9813",
+      "name": "prince",
+      "email": "princesh1411@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "1d26",
+      "name": "shweta",
+      "email": "shweta20@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "1cc2",
+      "name": "anjli",
+      "email": "anjli13@gmail.com",
+      "password": "anjali13"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Create a login form using formik in react js",
+      "body": "Todays article will demonstrate how to develop a login form in react js using formik."
+    },
+    {
+      "id": 2,
+      "title": "How to parse or read CSV files in ReactJS",
+      "body": "In this article, I will teach you how to parse or read CSV files in ReactJS in the simplest way possible. "
+    },
+    {
+      "id": 2,
+      "title": "How to parse or read CSV files in ReactJS",
+      "body": "In this article, I will teach you how to parse or read CSV files in ReactJS in the simplest way possible. "
+    },
+    {
+      "id": 2,
+      "title": "How to parse or read CSV files in ReactJS",
+      "body": "In this article, I will teach you how to parse or read CSV files in ReactJS in the simplest way possible. "
+    },
+    {
+      "id": 2,
+      "title": "How to parse or read CSV files in ReactJS",
+      "body": "In this article, I will teach you how to parse or read CSV files in ReactJS in the simplest way possible. "
+    },
+    {
+      "id": 2,
+      "title": "How to parse or read CSV files in ReactJS",
+      "body": "In this article, I will teach you how to parse or read CSV files in ReactJS in the simplest way possible. "
+    }
+  ]
+}
