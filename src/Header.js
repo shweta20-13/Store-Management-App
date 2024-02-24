@@ -8,7 +8,8 @@ export function Header() {
    };
 
    function formateName(name){
-      return name.charAt(0).toUpperCase() + name.slice(1);
+      const fname=name.split(' ')[0];
+      return fname.charAt(0).toUpperCase() + fname.slice(1);
    }
    
    return (
