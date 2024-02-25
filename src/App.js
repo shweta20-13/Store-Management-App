@@ -11,7 +11,7 @@ function App() {
   return (
     <div className='register'>
      <Routes>
-      <Route path='/' element={<Home  name="shweta" />} />
+      <Route path='/' element={<Home  name="My Home" />} />
       <Route path='/about' element={<About />} />
       <Route path='/login' element={<Login />} />
       <Route path='/add' element={<AddProduct />} />

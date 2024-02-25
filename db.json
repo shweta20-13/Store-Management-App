@@ -40,39 +40,25 @@
   ],
   "product": [
     {
-      "id": "6dbb",
-      "name": "watch",
-      "price": "12000",
+      "id": "7a26",
+      "name": "one piece",
+      "price": "1200",
       "color": "black",
-      "weight": "1kg"
+      "weight": "100g"
     },
     {
-      "id": "97c5",
-      "name": "shoes",
-      "price": "1000",
+      "name": "mobile",
+      "price": "1200",
       "color": "yellow",
-      "weight": "12kg"
+      "weight": "501g",
+      "id": "f017"
     },
     {
-      "id": "48b5",
+      "id": "e791",
       "name": "laptop",
       "price": "50000",
-      "color": "black",
-      "weight": "1.7kg"
-    },
-    {
-      "id": "31ab",
-      "name": "mobile",
-      "price": "12000",
-      "color": "red",
-      "weight": "2kg"
-    },
-    {
-      "id": "0ea7",
-      "name": "one peies",
-      "price": "1200",
-      "color": "green",
-      "weight": "500g"
+      "color": "light gary",
+      "weight": "1.4kg"
     }
   ]
 }
