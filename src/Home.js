@@ -16,7 +16,9 @@ useEffect(()=>{
     return (
         <div className='container-fluid'>
         <Header />
-        <h2>welcome, to {name} page !</h2>
+        <div content='content'>
+        <h2>welcome, to <span style={{color:"blue",}}> {name} </span> page !</h2>
+        </div>
         </div>
     )
 }

@@ -1,9 +1,18 @@
 .App {
   text-align: center;
 }
-
+.content{
+  display: flex;
+  justify-content: center;
+}
 .register{
    display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.addproduct{
+  display: flex;
    justify-content: center;
    margin-top: 20px;
 }
