@@ -1,23 +1,39 @@
 import './App.css';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 export function Header() {
-   const navigate=useNavigate();
-   const logout=()=>{
+   const navigate = useNavigate();
+   const logout = () => {
       localStorage.clear('user-name');
       navigate('/login');
    };
 
-   function formateName(name){
-      const fname=name.split(' ')[0];
+   function formateName(name) {
+      const fname = name.split(' ')[0];
       return fname.charAt(0).toUpperCase() + fname.slice(1);
    }
-   
+
    return (
       <>
          <nav>
             <ul>
                <li>
-                  <a href="/">Home</a>
+                  <a className='logo'>
+                     <div class="spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                     </div>
+                  </a>
+               </li>
+               <li>
+                  <a href='/'>Home</a>
                </li>
                <li>
                   <a href="/about">About</a>
@@ -32,10 +48,10 @@ export function Header() {
                   localStorage.getItem('user-name') ? (
                      <>
                         <li>
-                           <a className='name' href="">{formateName(localStorage.getItem('user-name'))}</a>
+                           <a className='name' href="/profile">{formateName(localStorage.getItem('user-name'))}</a>
                         </li>
                         <li>
-                           <a className='logout' href=""  onClick={logout}>Logout</a>
+                           <a className='logout' href="" onClick={logout}>Logout</a>
                         </li>
                      </>
                   ) : (

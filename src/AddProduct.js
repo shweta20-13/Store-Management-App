@@ -1,6 +1,7 @@
 import { Header } from "./Header";
 import React,{useEffect,useState} from "react";
 import {useNavigate} from 'react-router-dom';
+import './App.css';
 export function AddProduct(){
     const [name,setName]=useState();
     const [price,setPrice]=useState();
@@ -27,12 +28,13 @@ export function AddProduct(){
                 name: name,
                 price: price,
                 color: color,
-                weight:weight
+                weight:weight,
+                by:localStorage.getItem('user-name').split(' ')[0],
               }),
             });
       
             if (!response.ok) {
-              throw new Error('Registration Failed');
+              throw new Error('Add product Failed');
             }
       
             const data = await response.json();
@@ -48,6 +50,7 @@ export function AddProduct(){
         <div className='container-fluid'>
         <Header />
         <h2 className="text-center">Add your Product</h2>
+        <div className="loader ml-5"></div>
         <div className="addproduct">
         <form style={{width:"550px"}} onSubmit={handleSubmit}>
         <div className="mb-3">

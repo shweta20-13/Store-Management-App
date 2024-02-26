@@ -29,11 +29,17 @@
       "name": "bruce mattel",
       "email": "bruce@test.com",
       "password": "12345"
+    },
+    {
+      "id": "5d80",
+      "name": "sam carry",
+      "email": "sam@test.com",
+      "password": "sam123"
     }
   ],
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Create a login form using formik in react js",
       "body": "Todays article will demonstrate how to develop a login form in react js using formik."
     }
@@ -44,13 +50,15 @@
       "name": "one piece",
       "price": "1200",
       "color": "black",
-      "weight": "100g"
+      "weight": "100g",
+      "by": "peter"
     },
     {
       "name": "mobile",
       "price": "1200",
       "color": "yellow",
       "weight": "501g",
+      "by": "peter",
       "id": "f017"
     },
     {
@@ -58,7 +66,41 @@
       "name": "laptop",
       "price": "50000",
       "color": "light gary",
-      "weight": "1.4kg"
+      "weight": "1.4kg",
+      "by": "shweta"
+    },
+    {
+      "id": "5305",
+      "name": "iphone",
+      "price": "120000",
+      "color": "golden",
+      "weight": "550g",
+      "by": "prince"
+    },
+    {
+      "id": "afa5",
+      "name": "tshirt",
+      "price": "1000",
+      "color": "blue",
+      "weight": "100g",
+      "by": "anjli"
+    },
+    {
+      "id": "0fef",
+      "name": "shoes",
+      "price": "1599",
+      "color": "black",
+      "weight": "300g",
+      "by": "sam"
+    },
+    {
+      "id": "51bf",
+      "name": "Shirt",
+      "price": "1299",
+      "color": "green",
+      "weight": "100g",
+      "by": "prince",
+      "date": 1708972587734
     }
   ]
 }

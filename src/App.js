@@ -6,6 +6,7 @@ import { About } from './About';
 import {Routes,Route} from 'react-router-dom';
 import { AddProduct } from './AddProduct';
 import { Product } from './Product';
+import Profile from './Profile';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/login' element={<Login />} />
       <Route path='/add' element={<AddProduct />} />
       <Route path='/product' element={<Product />} />
+      <Route path='/profile' element={<Profile />} />
       <Route path='/register' element={<Register />} />
       <Route path='*' element={<Login />} />
      </Routes>
