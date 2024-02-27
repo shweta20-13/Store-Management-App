@@ -1,5 +1,5 @@
 import './App.css';
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Header } from './Header';
 import { useNavigate } from 'react-router-dom';
 
@@ -44,7 +44,7 @@ function Register() {
       const data = await response.json();
       console.log('Registration Successful:', data.token);
       localStorage.setItem('user-name', data.name);
-      navigate('/'); 
+      navigate('/');
       //navigate('/login'); 
     } catch (error) {
       console.error('Registration Error:', error);
@@ -65,7 +65,7 @@ function Register() {
               type='text'
               id='name'
               value={name}
-              onChange={(e)=>setName(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
               className='form-control'
               placeholder='Enter Your Name'
             />
@@ -98,6 +98,17 @@ function Register() {
             <div id='emailHelp' className='form-text'>
               Password should be alpha-numeric
             </div>
+          </div>
+          <div>
+            <label class="container">
+              <input type="checkbox" checked="checked" />
+              <div class="checkmark" style={{
+                width: "35px",
+                height: "39px",
+                top: "1px",
+                left: "-11px"
+              }}></div>
+            </label>
           </div>
           <div className='d-flex justify-content-center'>
             <button type='submit' className='btn btn-primary'>

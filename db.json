@@ -41,6 +41,12 @@
       "name": "karan kappor",
       "email": "karan04@gmail.com",
       "password": "karan9"
+    },
+    {
+      "id": "cee7",
+      "name": "",
+      "email": "",
+      "password": ""
     }
   ],
   "posts": [
@@ -51,14 +57,6 @@
     }
   ],
   "product": [
-    {
-      "id": "7a26",
-      "name": "one piece",
-      "price": "1200",
-      "color": "black",
-      "weight": "100g",
-      "by": "peter"
-    },
     {
       "name": "mobile",
       "price": "1200",
@@ -104,7 +102,16 @@
       "price": "1201",
       "color": "green",
       "weight": "100g",
+      "by": "sam",
       "id": "51bf"
+    },
+    {
+      "id": "0e66",
+      "name": "chair",
+      "price": "1000",
+      "color": "color",
+      "weight": "5kg",
+      "by": "prince"
     }
   ]
 }

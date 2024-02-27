@@ -150,7 +150,7 @@ export function Product() {
                 <td>{product.price}</td>
                 <td>{product.color}</td>
                 <td>{product.weight}</td>
-                <td><button className="btn btn-danger" onClick={() => removeItem(product.id)}>Delete</button></td>
+                <td><button className="btn btn-danger" onClick={() => removeItem(product.id)}>del</button></td>
                 <td><button className="btn btn-warning" onClick={() => editItem(product)}>Edit</button></td>
               </tr>
             ))}

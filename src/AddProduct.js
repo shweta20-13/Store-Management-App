@@ -49,7 +49,7 @@ export function AddProduct(){
     return (
         <div className='container-fluid'>
         <Header />
-        <h2 className="text-center">Add your Product</h2>
+        <h2 className="text-center text-secondary">Add your Product</h2>
         <div className="loader ml-5"></div>
         <div className="addproduct">
         <form style={{width:"550px"}} onSubmit={handleSubmit}>

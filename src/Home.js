@@ -15,7 +15,7 @@ export function Home(props) {
   return (
     <div className='container-fluid' style={{ backgroundImage: `url(https://www.questionpro.com/blog/wp-content/uploads/2023/03/product-management-lifecycle.jpg)`, backgroundSize: 'cover', width: '100vw', height: '100vh' }}>
       <Header />
-      <h2 className=''>Welcome to <span style={{ color: "blue" }}>{name}</span> page!</h2>
+      <h2 className="text-secondary">Welcome to <span style={{ color: "#004687" }}>{name}</span> page!</h2>
       {/* <div className='content'>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
