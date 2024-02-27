@@ -35,6 +35,12 @@
       "name": "sam carry",
       "email": "sam@test.com",
       "password": "sam123"
+    },
+    {
+      "id": "39b3",
+      "name": "karan kappor",
+      "email": "karan04@gmail.com",
+      "password": "karan9"
     }
   ],
   "posts": [
@@ -94,13 +100,11 @@
       "by": "sam"
     },
     {
-      "id": "51bf",
       "name": "Shirt",
-      "price": "1299",
+      "price": "1201",
       "color": "green",
       "weight": "100g",
-      "by": "prince",
-      "date": 1708972587734
+      "id": "51bf"
     }
   ]
 }
