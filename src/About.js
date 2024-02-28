@@ -7,9 +7,9 @@ export function About() {
   const change = useNavigate();
 
   useEffect(() => {
-    if (!localStorage.getItem('user-name')) {
-      change('/login');
-    }
+    // if (!localStorage.getItem('user-name')) {
+    //   change('/login');
+    // }
   });
 //   
   return (

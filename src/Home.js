@@ -4,7 +4,6 @@ import Footer from './Footer';
 
 export function Home(props) {
   const [name, setName] = useState('');
-
   useEffect(() => {
     if (localStorage.getItem('user-name')) {
       setName(localStorage.getItem('user-name'));

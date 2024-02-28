@@ -9,9 +9,9 @@ function Login() {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    if(localStorage.getItem('user-id')){
-      navigate('/');
-    }
+    // if(localStorage.getItem('user-id')){
+    //   navigate('/');
+    // }
   });
 
   const handleEmail = (e) => {

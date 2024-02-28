@@ -7,19 +7,20 @@ import {Routes,Route} from 'react-router-dom';
 import { AddProduct } from './AddProduct';
 import { Product } from './Product';
 import Profile from './Profile';
+import ProtuctedRoute from './ProtectedRoute';
 
 function App() {
   return (
     <div className='register'>
      <Routes>
-      <Route path='/' element={<Home  name="My Home" />} />
-      <Route path='/about' element={<About />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/add' element={<AddProduct />} />
-      <Route path='/product' element={<Product />} />
-      <Route path='/profile' element={<Profile />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/about' element={<ProtuctedRoute Component={About} />} />
+      <Route path='/login' element={<ProtuctedRoute Component={Login} />} />
+      <Route path='/add' element={<ProtuctedRoute Component={AddProduct} />} />
+      <Route path='/product' element={<ProtuctedRoute Component={Product} />} />
+      <Route path='/profile' element={<ProtuctedRoute Component={Profile} />} />
       <Route path='/register' element={<Register />} />
-      <Route path='*' element={<Login />} />
+      <Route path='*' element={<ProtuctedRoute Component={Login} />} />
      </Routes>
     </div>
   );

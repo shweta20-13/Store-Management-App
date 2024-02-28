@@ -2,7 +2,6 @@ import { Header } from "./Header";
 import React,{useEffect,useState} from "react";
 import {useNavigate} from 'react-router-dom';
 import './App.css';
-import Footer from "./Footer";
 export function AddProduct(){
     const [name,setName]=useState();
     const [price,setPrice]=useState();
@@ -12,9 +11,9 @@ export function AddProduct(){
     const change=useNavigate();
 
     useEffect(()=>{
-      if(!localStorage.getItem('user-name')){
-        change('/login');
-      }
+      // if(!localStorage.getItem('user-name')){
+      //   change('/login');
+      // }
     },[]);
 
     async function handleSubmit(e){

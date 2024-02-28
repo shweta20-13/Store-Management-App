@@ -52,7 +52,6 @@ function Register() {
       localStorage.setItem('user-name', data.name);
       localStorage.setItem('user-id',data.id);
       navigate('/');
-      //navigate('/login'); 
     } catch (error) {
       console.error('Registration Error:', error);
     }
