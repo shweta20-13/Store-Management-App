@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Header } from './Header';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +9,12 @@ function Register() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  useEffect(()=>{
+    if(localStorage.getItem('user-id')){
+      navigate('/');
+    }
+  });
+  
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -44,6 +50,7 @@ function Register() {
       const data = await response.json();
       console.log('Registration Successful:', data.token);
       localStorage.setItem('user-name', data.name);
+      localStorage.setItem('user-id',data.id);
       navigate('/');
       //navigate('/login'); 
     } catch (error) {

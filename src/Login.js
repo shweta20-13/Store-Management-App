@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Header } from './Header';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,6 +7,12 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    if(localStorage.getItem('user-id')){
+      navigate('/');
+    }
+  });
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -39,6 +45,7 @@ function Login() {
       }
 
       localStorage.setItem('user-name', user.name);
+      localStorage.setItem('user-id',user.id);
       navigate('/'); 
     } catch (error) {
       console.error('Login Error:', error);

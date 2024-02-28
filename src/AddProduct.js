@@ -2,6 +2,7 @@ import { Header } from "./Header";
 import React,{useEffect,useState} from "react";
 import {useNavigate} from 'react-router-dom';
 import './App.css';
+import Footer from "./Footer";
 export function AddProduct(){
     const [name,setName]=useState();
     const [price,setPrice]=useState();

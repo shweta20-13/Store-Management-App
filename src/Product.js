@@ -25,8 +25,8 @@ export function Product() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3030/product',{
-        method:'GET'
+      const response = await fetch('http://localhost:3030/product', {
+        method: 'GET'
       });
       if (!response.ok) {
         throw new Error('Failed to fetch product data');
@@ -47,7 +47,7 @@ export function Product() {
       if (!response.ok) {
         throw new Error('Failed to delete product!');
       }
-      
+
       const updatedProducts = products.filter(product => product.id !== id);
       setProducts(updatedProducts);
     } catch (error) {
@@ -96,7 +96,7 @@ export function Product() {
       if (!response.ok) {
         throw new Error('Failed to update product');
       }
-      //console.log(`Product with ID ${editProduct.id} updated successfully.`);
+
       setEditProduct(null);
     } catch (error) {
       console.error(`Error updating product with ID ${editProduct.id}:`, error);
@@ -105,11 +105,11 @@ export function Product() {
 
   // Function to search products 
   const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    product.price.toString().includes(searchTerm) ||
-    product.weight.toString().includes(searchTerm) ||
-    product.color.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    product.by.toLowerCase().includes(searchTerm.toLowerCase()) 
+    (product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+    (product.price && product.price.toString().includes(searchTerm.toLowerCase())) ||
+    (product.weight && product.weight.toString().includes(searchTerm.toLowerCase())) ||
+    (product.color && product.color.toLowerCase().includes(searchTerm.toLowerCase())) ||
+    (product.by && product.by.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
   );
 
   return (
@@ -117,16 +117,18 @@ export function Product() {
       <Header />
       <div className="d-flex justify-content-between">
         <h2 className="text-secondary">This is the product page</h2>
-        <div className="search">
+        <div className="search" style={{ display: "inline-flex", borderRadius: "10px" ,padding:"20PX" }}>
           <input
+            className="input"
             type="search"
             placeholder="Search by name, price, color, or weight"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{width:"300px"}}
+            style={{ width: "300px", borderTopLeftRadius: "9px", borderBottomLeftRadius: "9px" }}
           />
-          <button style={{ background: 'rgb(70, 86, 300)', marginRight: '30px' }}>Search</button>
+          <button className="search" style={{ background: 'rgb(70, 86, 300)',color:"yellow", marginLeft: "-1px", borderTopRightRadius: "9px", borderBottomRightRadius: "9px" }}>Search</button>
         </div>
+
       </div>
 
       <div className="table-responsive">
@@ -146,7 +148,7 @@ export function Product() {
             {filteredProducts.map((product, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
-                <td>{product.name} <span style={{color:"gray", marginLeft:"30px"}}>by - {product.by}</span></td> 
+                <td>{product.name}</td>
                 <td>{product.price}</td>
                 <td>{product.color}</td>
                 <td>{product.weight}</td>
@@ -159,27 +161,31 @@ export function Product() {
       </div>
       {
         editProduct && (
-          <div>
-            <h3 className="text-center">Edit Product</h3>
-            <div className="addproduct" ref={editFormRef}>
-              <form style={{ width: "550px" }}>
-                <div className="mb-3">
-                  <label>ProductName</label>
-                  <input type="text" className="form-control" name="name" value={FormData.name} onChange={inputchange} />
+          <div className="xyz" style={{ position: "absolute", top: "190px", left: "420px" }}>
+            <div className="bg-light" ref={editFormRef}>
+              <h3 className="text-center mt-2,">Edit Product</h3>
+              <form style={{ width: "550px", marginBottom: "50px" }}>
+                <div className="inner-content" style={{ width: "450px", marginLeft: "50px", marginRight: "50px" }}>
+                  <div className="mb-3">
+                    <label>ProductName</label>
+                    <input type="text" className="form-control" name="name" value={FormData.name} onChange={inputchange} />
+                  </div>
+                  <div className="mb-3">
+                    <label>Price</label>
+                    <input type="text" className="form-control" name="price" value={FormData.price} onChange={inputchange} />
+                  </div>
+                  <div className="mb-3">
+                    <label>Weight</label>
+                    <input type="text" className="form-control" name="weight" value={FormData.weight} onChange={inputchange} />
+                  </div>
+                  <div className="mb-3">
+                    <label>Color</label>
+                    <input type="text" className="form-control" name="color" value={FormData.color} onChange={inputchange} />
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <button type="submit" className="btn btn-primary" onClick={handlesubmit} style={{ marginBottom: "30px" }}>Update</button>
+                  </div>
                 </div>
-                <div className="mb-3">
-                  <label>Price</label>
-                  <input type="text" className="form-control" name="price" value={FormData.price} onChange={inputchange} />
-                </div>
-                <div className="mb-3">
-                  <label>Weight</label>
-                  <input type="text" className="form-control" name="weight" value={FormData.weight} onChange={inputchange} />
-                </div>
-                <div className="mb-3">
-                  <label>Color</label>
-                  <input type="text" className="form-control" name="color" value={FormData.color} onChange={inputchange} />
-                </div>
-                <button type="submit" className="btn btn-primary" onClick={handlesubmit}>Update</button>
               </form>
             </div>
           </div>
@@ -188,3 +194,6 @@ export function Product() {
     </div>
   );
 }
+
+export default Product;
+

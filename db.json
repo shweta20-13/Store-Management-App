@@ -37,7 +37,7 @@
       "password": "sam123"
     },
     {
-      "id": "39b3",
+      "id": "3993",
       "name": "karan kappor",
       "email": "karan04@gmail.com",
       "password": "karan9"
@@ -47,6 +47,12 @@
       "name": "",
       "email": "",
       "password": ""
+    },
+    {
+      "id": "6310",
+      "name": "shubham sahu ",
+      "email": "shubham@wyr.ai",
+      "password": "12345"
     }
   ],
   "posts": [
@@ -66,43 +72,33 @@
       "id": "f017"
     },
     {
-      "id": "e791",
-      "name": "laptop",
-      "price": "50000",
-      "color": "light gary",
-      "weight": "1.4kg",
-      "by": "shweta"
-    },
-    {
-      "id": "5305",
       "name": "iphone",
-      "price": "120000",
+      "price": "90000",
       "color": "golden",
       "weight": "550g",
+      "id": "5305",
       "by": "prince"
     },
     {
-      "id": "afa5",
       "name": "tshirt",
       "price": "1000",
       "color": "blue",
       "weight": "100g",
-      "by": "anjli"
+      "by": "karan",
+      "id": "afa5"
     },
     {
-      "id": "0fef",
       "name": "shoes",
       "price": "1599",
-      "color": "black",
-      "weight": "300g",
-      "by": "sam"
+      "color": "red",
+      "weight": "399g",
+      "id": "0fef"
     },
     {
       "name": "Shirt",
       "price": "1201",
       "color": "green",
       "weight": "100g",
-      "by": "sam",
       "id": "51bf"
     },
     {
@@ -112,6 +108,51 @@
       "color": "color",
       "weight": "5kg",
       "by": "prince"
+    },
+    {
+      "id": "9abf",
+      "name": "Snaks",
+      "price": "200",
+      "color": "choclate",
+      "weight": "500g",
+      "by": "karan"
+    },
+    {
+      "name": "Bag",
+      "price": "1400",
+      "color": "black",
+      "weight": "300g",
+      "id": "086c"
+    },
+    {
+      "id": "c59a",
+      "name": "pen",
+      "price": "50",
+      "color": "blue",
+      "weight": "10g",
+      "by": "prince"
+    },
+    {
+      "id": "c48d",
+      "name": "meta quest",
+      "price": "70000",
+      "color": "white",
+      "weight": "500g",
+      "by": "shubham"
+    },
+    {
+      "name": "samsung",
+      "price": "12099",
+      "color": "black",
+      "weight": "200g",
+      "id": "2654"
+    },
+    {
+      "name": "Telivision",
+      "price": "11099",
+      "color": "black",
+      "weight": "10kg",
+      "id": "8d39"
     }
   ]
 }
