@@ -22,7 +22,6 @@ function App() {
       <Route path='/add' element={<ProtuctedRoute Component={AddProduct} />} />
       <Route path='/product' element={<ProtuctedRoute Component={Product} />} />
       <Route path='/profile' element={<ProtuctedRoute Component={Profile} />} />
-      <Route path='/feature' element={<ProtuctedRoute Component={Feature} />} />
       <Route path='/users' element={<ProtuctedRoute  Component={Users} />}/>
       <Route path='/user/:id' element={<ProtuctedRoute Component={User} />} />
       <Route path='/register' element={<Register />} />

@@ -1,12 +1,12 @@
-import { Header } from "./Header";
+// import { Header } from "./Header";
 
-const Feature=()=>{
-  return (
-    <div className="container-fluid">
-    <Header />
-    <h3>This is Feature components !</h3>
-    </div>
-  )
-}
+// const Feature=()=>{
+//   return (
+//     <div className="container-fluid">
+//     <Header />
+//     <h3>This is Feature components !</h3>
+//     </div>
+//   )
+// }
 
-export default Feature;
+// export default Feature;

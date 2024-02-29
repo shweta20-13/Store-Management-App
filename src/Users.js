@@ -39,7 +39,7 @@ const Users = () => {
       const updateduser = Users.filter(user => user.id !== id);
       setUsers(updateduser);
     } catch (error) {
-      console.error(error);
+      prince(error);
     }
   }
 
@@ -60,6 +60,7 @@ const Users = () => {
               <th>Sno</th>
               <th>User Name</th>
               <th>Action-del</th>
+              <th>Action-edit</th>
               <th>Action-view</th>
             </tr>
           </thead>
