@@ -43,15 +43,15 @@
       "password": "karan9"
     },
     {
-      "id": "cee7",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
       "id": "6310",
       "name": "shubham sahu ",
       "email": "shubham@wyr.ai",
+      "password": "12345"
+    },
+    {
+      "id": "e167",
+      "name": "Ashish lal kumar",
+      "email": "ashish@wyr.ai",
       "password": "12345"
     }
   ],
@@ -91,7 +91,7 @@
       "name": "shoes",
       "price": "1599",
       "color": "red",
-      "weight": "399g",
+      "weight": "390",
       "id": "0fef"
     },
     {
@@ -133,12 +133,11 @@
       "by": "prince"
     },
     {
-      "id": "c48d",
       "name": "meta quest",
       "price": "70000",
       "color": "white",
       "weight": "500g",
-      "by": "shubham"
+      "id": "c48d"
     },
     {
       "name": "samsung",

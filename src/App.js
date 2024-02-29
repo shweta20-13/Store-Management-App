@@ -8,6 +8,9 @@ import { AddProduct } from './AddProduct';
 import { Product } from './Product';
 import Profile from './Profile';
 import ProtuctedRoute from './ProtectedRoute';
+import Feature from './Feature';
+import Users from './Users';
+import User from './User';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
       <Route path='/add' element={<ProtuctedRoute Component={AddProduct} />} />
       <Route path='/product' element={<ProtuctedRoute Component={Product} />} />
       <Route path='/profile' element={<ProtuctedRoute Component={Profile} />} />
+      <Route path='/feature' element={<ProtuctedRoute Component={Feature} />} />
+      <Route path='/users' element={<ProtuctedRoute  Component={Users} />}/>
+      <Route path='/user/:id' element={<ProtuctedRoute Component={User} />} />
       <Route path='/register' element={<Register />} />
       <Route path='*' element={<ProtuctedRoute Component={Login} />} />
      </Routes>
