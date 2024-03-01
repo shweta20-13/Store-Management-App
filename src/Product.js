@@ -1,6 +1,6 @@
 import { Header } from "./Header";
 import React, { useEffect, useState, useRef } from "react";
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 export function Product() {
   const [products, setProducts] = useState([]);
@@ -13,7 +13,7 @@ export function Product() {
   });
 
   const [searchTerm, setSearchTerm] = useState("");
-  const change = useNavigate();
+  //const change = useNavigate();
   const editFormRef = useRef(null);
 
   useEffect(() => {

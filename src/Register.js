@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './Header';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,14 +7,17 @@ function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [role, setRole] = useState('');
+  const [image,setImage]=useState('');
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    if(localStorage.getItem('user-id')){
+  useEffect(() => {
+    if (localStorage.getItem('user-id')) {
       navigate('/');
     }
-  });
-  
+  }, [navigate]);
+
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -27,31 +30,45 @@ function Register() {
     setPassword(e.target.value);
   };
 
+  const handleConfPassword = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleRoleChange = (e) => {
+    setRole(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3030/user', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-        }),
-      });
+      if (password === confirmPassword) {
+        const response = await fetch('http://localhost:3030/user', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            password: password,
+            role: role, 
+            image:image,
+          }),
+        });
 
-      if (!response.ok) {
-        throw new Error('Registration Failed');
+        if (!response.ok) {
+          throw new Error('Registration Failed');
+        }
+
+        const data = await response.json();
+        console.log('Registration Successful:', data.token);
+        localStorage.setItem('user-name', data.name);
+        localStorage.setItem('user-id', data.id);
+        navigate('/');
+      } else {
+        alert(`Passwords do not match!`);
       }
-
-      const data = await response.json();
-      console.log('Registration Successful:', data.token);
-      localStorage.setItem('user-name', data.name);
-      localStorage.setItem('user-id',data.id);
-      navigate('/');
     } catch (error) {
       console.error('Registration Error:', error);
     }
@@ -71,7 +88,7 @@ function Register() {
               type='text'
               id='name'
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={handleName}
               className='form-control'
               placeholder='Enter Your Name'
             />
@@ -105,15 +122,38 @@ function Register() {
               Password should be alpha-numeric
             </div>
           </div>
+          <div className='mb-3'>
+            <label htmlFor='confirmPassword' className='form-label'>
+              Confirm Password
+            </label>
+            <input
+              type='password'
+              id='confirmPassword'
+              value={confirmPassword}
+              onChange={handleConfPassword}
+              className='form-control'
+              placeholder='Enter Your Confirm Password'
+            />
+          </div>
+          <div className='mb-3'>
+            <label htmlFor='role' className='form-label'>
+              Role
+            </label>
+            <select
+              id='role'
+              value={role}
+              onChange={handleRoleChange}
+              className='form-select'
+            >
+              <option value=''>Select Role</option>
+              <option value='admin'>Admin</option>
+              <option value='worker'>Worker</option>
+            </select>
+          </div>
           <div>
-            <label class="container">
-              <input type="checkbox" checked="checked" />
-              <div class="checkmark" style={{
-                width: "35px",
-                height: "39px",
-                top: "1px",
-                left: "-11px"
-              }}></div>
+            <label className='container'>
+              <input type='checkbox' checked='checked' />
+              <span className='checkmark'></span>
             </label>
           </div>
           <div className='d-flex justify-content-center'>
@@ -128,4 +168,3 @@ function Register() {
 }
 
 export default Register;
-

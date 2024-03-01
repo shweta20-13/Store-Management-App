@@ -37,10 +37,8 @@ export function AddProduct(){
               throw new Error('Add product Failed');
             }
       
-            const data = await response.json();
-            console.log('Registration Successful:', data);
+            await response.json();
             change('/product'); 
-            //navigate('/login'); 
           } catch (error) {
             console.error('Registration Error:', error);
           }

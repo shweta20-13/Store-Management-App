@@ -46,6 +46,7 @@ function Login() {
 
       localStorage.setItem('user-name', user.name);
       localStorage.setItem('user-id',user.id);
+      localStorage.setItem('user-role',user.role);
       navigate('/'); 
     } catch (error) {
       console.error('Login Error:', error);

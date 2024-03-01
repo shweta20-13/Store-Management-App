@@ -27,12 +27,44 @@ export function Header() {
         break;
       case 'users':
         navigate('/users');
-        break;  
+        break;
       case 'other':
         navigate('/');
         break;
       default:
         break;
+    }
+  };
+
+  const renderUsersDropdown = () => {
+    const userRole = localStorage.getItem('user-role');
+    if (userRole === 'admin') {
+      return (
+        <li className="dropdown">
+          <select onChange={(e) => handleFeatureClick(e.target.value)} className='feature'>
+            <option value="">Features</option>
+            <option value="about">About</option>
+            <option value="add">Add Product</option>
+            <option value="product">Product</option>
+            <option value="users">Users</option>
+            <option value="other">Other</option>
+          </select>
+        </li>
+      );
+    } else if (userRole === 'worker') {
+      return (
+        <li className="dropdown">
+          <select onChange={(e) => handleFeatureClick(e.target.value)} className='feature'>
+            <option value="">Features</option>
+            <option value="about">About</option>
+            <option value="add">Add Product</option>
+            <option value="product">Product</option>
+            <option value="other">Other</option>
+          </select>
+        </li>
+      );
+    } else {
+      return null;
     }
   };
 
@@ -68,40 +100,28 @@ export function Header() {
           <li>
             <a href="/product">Product</a>
           </li>
-          <li className="dropdown">
-            <select onChange={(e) => handleFeatureClick(e.target.value)} className='feature'>
-              <option  value="">Features</option>
-              <option  value="about">About</option>
-              <option  value="add">Add Product</option>
-              <option  value="product">Product</option>
-              <option value="users">Users</option>
-              <option  value="other">Other</option>
-            </select>
-          </li>
-          {
-            localStorage.getItem('user-name') ? (
-              <>
-                <li className='auth'>
-                  <a className='name' href="/profile">{formateName(localStorage.getItem('user-name'))}</a>
-                </li>
-                <li>
-                  <a className='logout' href="" onClick={logout}>Logout</a>
-                </li>
-              </>
-            ) : (
-              <>
-                <li className='auth'>
-                  <a href="/login">Login</a>
-                </li >
-                <li>
-                  <a href="/register">Register</a>
-                </li>
-              </>
-            )
-          }
+          {renderUsersDropdown()}
+          {localStorage.getItem('user-name') ? (
+            <>
+              <li className='auth'>
+                <a className='name' href="/profile">{formateName(localStorage.getItem('user-name'))}</a>
+              </li>
+              <li>
+                <a className='logout' href="" onClick={logout}>Logout</a>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className='auth'>
+                <a href="/login">Login</a>
+              </li>
+              <li>
+                <a href="/register">Register</a>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </>
   );
 }
-
