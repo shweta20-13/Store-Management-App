@@ -1,4 +1,3 @@
-function add()
-{
-    console.log("hii");
+function gitcommand(){
+    console.log('check!');
 }
