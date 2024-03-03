@@ -17,6 +17,7 @@ function App() {
     <div className='register'>
      <Routes>
       <Route path='/' element={<Home />} />
+      <Route path='/register' element={<Register />} />
       <Route path='/about' element={<ProtuctedRoute Component={About} />} />
       <Route path='/login' element={<ProtuctedRoute Component={Login} />} />
       <Route path='/add' element={<ProtuctedRoute Component={AddProduct} />} />
@@ -24,7 +25,6 @@ function App() {
       <Route path='/profile' element={<ProtuctedRoute Component={Profile} />} />
       <Route path='/users' element={<ProtuctedRoute  Component={Users} />}/>
       <Route path='/user/:id' element={<ProtuctedRoute Component={User} />} />
-      <Route path='/register' element={<Register />} />
       <Route path='*' element={<ProtuctedRoute Component={Login} />} />
      </Routes>
     </div>
