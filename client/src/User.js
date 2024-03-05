@@ -17,7 +17,7 @@ const User = () => {
 
   const fetchUser = async (id) => {
     try {
-      const userdata = await fetch(`http://localhost:3030/user/${id}`, {
+      const userdata = await fetch(`https://jsonserver-iota.vercel.app/user/${id}`, {
         method: "GET",
       });
       const result = await userdata.json();

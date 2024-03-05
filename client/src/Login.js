@@ -26,7 +26,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3030/user');
+      const response = await fetch('https://jsonserver-iota.vercel.app/user');
       if (!response.ok) {
         throw new Error('Failed to fetch user data');
       }

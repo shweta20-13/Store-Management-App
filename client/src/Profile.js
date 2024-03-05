@@ -42,7 +42,7 @@ export default function Profile() {
 
   async function getdata() {
     try {
-      const response = await fetch(`http://localhost:3030/user/${id}`, {
+      const response = await fetch(`https://jsonserver-iota.vercel.app/user/${id}`, {
         method: 'GET'
       });
       const data = await response.json();
@@ -72,7 +72,7 @@ export default function Profile() {
         formDataWithImage.image = imageURL;
         localStorage.setItem('user-image', imageURL); // Store image URL in local storage
       }
-      await fetch(`http://localhost:3030/user/${id}`, {
+      await fetch(`https://jsonserver-iota.vercel.app/user/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ export default function Profile() {
 
 //   async function getdata() {
 //     try {
-//       const response = await fetch(`http://localhost:3030/user/${id}`, {
+//       const response = await fetch(`https://jsonserver-iota.vercel.app/user/${id}`, {
 //         method: 'GET'
 //       });
 //       const data = await response.json();
@@ -220,14 +220,14 @@ export default function Profile() {
 //       if (imageFile) {
 //         const formData = new FormData();
 //         formData.append('file', imageFile);
-//         const response = await fetch(`http://localhost:3030/upload`, {
+//         const response = await fetch(`https://jsonserver-iota.vercel.app/upload`, {
 //           method: 'POST',
 //           body: formData
 //         });
 //         const data = await response.json();
 //         formDataWithImage.image = data.filePath;
 //       }
-//       await fetch(`http://localhost:3030/user/${id}`, {
+//       await fetch(`https://jsonserver-iota.vercel.app/user/${id}`, {
 //         method: 'PUT',
 //         headers: {
 //           'Content-Type': 'application/json',

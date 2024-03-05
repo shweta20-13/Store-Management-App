@@ -16,7 +16,7 @@ const Users = () => {
 
   const fetchData = async () => {
     try {
-      const userdata=await fetch(`http://localhost:3030/user`,{
+      const userdata=await fetch(`https://jsonserver-iota.vercel.app/user`,{
         method:'GET'
       });
     const result=await userdata.json();
@@ -28,7 +28,7 @@ const Users = () => {
 
   async function removeItem(id) {
     try {
-      const response = await fetch(`http://localhost:3030/user/${id}`, {
+      const response = await fetch(`https://jsonserver-iota.vercel.app/user/${id}`, {
         method: 'DELETE',
       });
 

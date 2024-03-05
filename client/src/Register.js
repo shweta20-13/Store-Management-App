@@ -43,7 +43,7 @@ function Register() {
 
     try {
       if (password === confirmPassword) {
-        const response = await fetch('http://localhost:3030/user', {
+        const response = await fetch('https://jsonserver-iota.vercel.app/user', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

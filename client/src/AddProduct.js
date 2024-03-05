@@ -19,7 +19,7 @@ export function AddProduct(){
     async function handleSubmit(e){
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3030/product', {
+            const response = await fetch('https://jsonserver-iota.vercel.app/product', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

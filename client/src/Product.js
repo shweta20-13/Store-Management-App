@@ -25,7 +25,7 @@ export function Product() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3030/product', {
+      const response = await fetch('https://jsonserver-iota.vercel.app/product', {
         method: 'GET'
       });
       if (!response.ok) {
@@ -40,7 +40,7 @@ export function Product() {
 
   async function removeItem(id) {
     try {
-      const response = await fetch(`http://localhost:3030/product/${id}`, {
+      const response = await fetch(`https://jsonserver-iota.vercel.app/product/${id}`, {
         method: 'DELETE',
       });
 
@@ -86,7 +86,7 @@ export function Product() {
 
     // API code to update the product
     try {
-      const response = await fetch(`http://localhost:3030/product/${editProduct.id}`, {
+      const response = await fetch(`https://jsonserver-iota.vercel.app/product/${editProduct.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
