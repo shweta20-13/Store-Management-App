@@ -1,6 +1,7 @@
 import { Header } from "./Header";
 import React,{useEffect,useState} from "react";
 import {useNavigate} from 'react-router-dom';
+import data1 from '../src/product.json';
 import './App.css';
 export function AddProduct(){
     const [name,setName]=useState();
@@ -19,25 +20,34 @@ export function AddProduct(){
     async function handleSubmit(e){
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3030/product', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                name: name,
-                price: price,
-                color: color,
-                weight:weight,
-                by:localStorage.getItem('user-name').split(' ')[0],
-              }),
-            });
+            // const response = await fetch('http://localhost:3030/product', {
+            //   method: 'POST',
+            //   headers: {
+            //     'Content-Type': 'application/json',
+            //   },
+            //   body: JSON.stringify({
+            //     name: name,
+            //     price: price,
+            //     color: color,
+            //     weight:weight,
+            //     by:localStorage.getItem('user-name').split(' ')[0],
+            //   }),
+            // });
       
-            if (!response.ok) {
-              throw new Error('Add product Failed');
+            // if (!response.ok) {
+            //   throw new Error('Add product Failed');
+            // }
+            // await response.json();
+            const product={
+              name:name,
+              price:price,
+              color:color,
+              weight:weight,
+              by:localStorage.getItem('user-name').split(' ')[0],
             }
-      
-            await response.json();
+            const data=data1;
+            data1.push(product);
+            data.push(product);
             change('/product'); 
           } catch (error) {
             console.error('Registration Error:', error);

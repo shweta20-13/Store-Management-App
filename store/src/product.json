@@ -1,0 +1,92 @@
+[
+    {
+      "name": "mobile",
+      "price": "1200",
+      "color": "yellow",
+      "weight": "501g",
+      "by": "peter",
+      "id": "f017"
+    },
+    {
+      "name": "iphone",
+      "price": "90000",
+      "color": "golden",
+      "weight": "550g",
+      "id": "5305",
+      "by": "prince"
+    },
+    {
+      "name": "tshirt",
+      "price": "1000",
+      "color": "blue",
+      "weight": "100g",
+      "by": "karan",
+      "id": "afa5"
+    },
+    {
+      "name": "shoes",
+      "price": "1599",
+      "color": "red",
+      "weight": "390",
+      "id": "0fef"
+    },
+    {
+      "name": "Shirt",
+      "price": "1201",
+      "color": "green",
+      "weight": "100g",
+      "id": "51bf"
+    },
+    {
+      "id": "0e66",
+      "name": "chair",
+      "price": "1000",
+      "color": "color",
+      "weight": "5kg",
+      "by": "prince"
+    },
+    {
+      "id": "9abf",
+      "name": "Snaks",
+      "price": "200",
+      "color": "choclate",
+      "weight": "500g",
+      "by": "karan"
+    },
+    {
+      "name": "Bag",
+      "price": "1400",
+      "color": "black",
+      "weight": "300g",
+      "id": "086c"
+    },
+    {
+      "id": "c59a",
+      "name": "pen",
+      "price": "50",
+      "color": "blue",
+      "weight": "10g",
+      "by": "prince"
+    },
+    {
+      "name": "meta quest",
+      "price": "70000",
+      "color": "white",
+      "weight": "500g",
+      "id": "c48d"
+    },
+    {
+      "name": "samsung",
+      "price": "12099",
+      "color": "black",
+      "weight": "200g",
+      "id": "2654"
+    },
+    {
+      "name": "Telivision",
+      "price": "11099",
+      "color": "black",
+      "weight": "10kg",
+      "id": "8d39"
+    }
+  ]
